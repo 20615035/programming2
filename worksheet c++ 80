@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+
+int main() {
+
+    double area;
+
+    try {
+        cout << "면적 입력: ";
+        cin >> area;
+        if (area < 0)
+            throw(area);
+        cout << sqrt(area) << endl;
+    }
+    catch (double e) {
+        cout << e << ": 면적은 음수가 될 수 없습니다."<<endl;
+    }
+}
